@@ -41,3 +41,17 @@ jobs:
     #   run: |
     #     pytest
     #   working-directory: ./hikvision-sdk
+  
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build image
+        uses: docker/build-push-action@v4
+        working-directory: ./hikvision-sdk
+        with:
+          push: false
+          platforms: linux/amd64,linux/arm64
