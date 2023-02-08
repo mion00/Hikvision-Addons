@@ -51,7 +51,8 @@ jobs:
 
       - name: Build image
         uses: docker/build-push-action@v4
-        working-directory: ./hikvision-sdk
         with:
+          context: ./hikvision-sdk
+          file: ./hikvision-sdk/Dockerfile
           push: false
           platforms: linux/amd64,linux/arm64
