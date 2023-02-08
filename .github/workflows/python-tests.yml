@@ -42,7 +42,7 @@ jobs:
     #     pytest
     #   working-directory: ./hikvision-sdk
   
-  build:
+  docker-image:
 
     runs-on: ubuntu-latest
     steps:
