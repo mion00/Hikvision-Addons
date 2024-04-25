@@ -1,6 +1,18 @@
 # Changelog
 
-## 3.0.14 - 2024-01-22
+## 3.0.0-beta.60 - 2024-04-11
+
+### Added
+
+- Added door id as asstribute for magnetic door event and external force alarm
+
+## 3.0.0-beta.59 - 2024-02-15
+
+### Added
+
+- Added control source as attribute for illegal card swipe
+
+## 3.0.0-beta.57 - 2024-01-22
 
 ### Added
 
@@ -8,67 +20,74 @@
 - For K1T devices a seperate device trigger was created when a face is verified, now the employee is an attribute
 - Added Call Status button, usefull to poll the call status for devices not supporting the SDK event
 
-### Changed
+## 3.0.0-beta.53 - 2024-01-08
 
-- Removed support for DS-K1T343MWX (SDK not compatible)
+### Added
 
-## 3.0.13 - 2024-01-02
+- Employee ID is now an attribute payload, instead of making seperate topics
+
+## 3.0.0-beta.52 - 2024-01-06
+
+### Added
+
+- Added support for DS-K1T502DBFWX-C
+
+## 3.0.0-beta.47 - 2023-12-28
 
 ### Added
 
 - Added support for DS-K1T343MWX
-- Caller info button is not optional anymore, seems K1T devices dont create an incoming ring event, so users can build a polling autimation with this button
-- For K1T devices a seperate device trigger is created when a face is verified, the trigger will show the employee id
 
-## 3.0.12 - 2023-11-13
+## 3.0.0-beta.46 - 2023-10-10
 
 ### Added
 
-- Added support for DS-K1T671MF device
+- Added alternative way for callsignal command if ISAPI fails with error 23
 
-## 3.0.10 - 2023-10-02
-
-### Added
-
-- New Mute/Unmute output sound buttons for indoor and outdoor stations
-- Default 0 output relays, if none found instead of stopping addon and present warning
-- Default 0 com relays, if none found instead of stopping addon and present warning
-
-## 3.0.8 - 2023-09-25
+## 3.0.0-beta.44 - 2023-09-20
 
 ### Added
 
-- Make mqtt port configurable for standalone containers
+- Add support for DS-K1T342
 
-## 3.0.7 - 2023-09-20
+## 3.0.0-beta.43 - 2023-09-12
 
 ### Added
 
-- Now also avaible on Dockerhub for standalone containers! https://hub.docker.com/r/pergolafabio/hikvision-doorbell
+- Trying to get locks for device DS-K1T341XX
 - Dynamicly add door relays for indoor stations
-- Dynamicly add com ports for indoor stations
+- Dynamicly add com ports for indoor stations 
+
+## 3.0.0-beta.39 - 2023-09-10
+
+### Test
+
+- Some testing to get correct info for locks for device DS-K1T341XX
+
+## 3.0.0-beta.36 - 2023-09-08
+
+### Fixed
+
+- Fixed the hangUp command
+
+## 3.0.0-beta.36 - 2023-09-07
+
+### Added
+
 - Added support for ACS events
-- Added support for DS-K1T341AM device
-- Added support for DS-K1T342 device
+
+## 3.0.0-beta.35 - 2023-09-06
+
+### Added
+
+- Added support for DS-K1T341AM (test)
 - Changed logging from INFO to DEBUG for polling alarm/scenes
 
-### Fixed
-
-- Fix for hangup button
-
-## 3.0.2 - 2023-09-01
-
-### Added
-
-- Better logging for caller_info, now you see it as attribute on caller_info button when pressed
-
-## 3.0.1 - 2023-08-30
-
-### Fixed
-
-- Fix for caller_info button
-
 ## 3.0.0-beta.34 - 2023-08-30
+
+## IMPORTANT
+
+- BETA period is over, i have now created a stable release, so you can now copy the config, uninstall the beta addon, install the main release and paste the config...... This main release is the same as the current beta build
 
 ### Added
 
@@ -283,21 +302,3 @@ The addon has been completely __overhauled__, with lots of __new features__ and 
 ### Deprecated
 - Old __configuration options__
 - Remove __`aarch64`__ folder of the deprecated addon
-
-## 2.1
-
-- Added reboot command as stdin service to restart the outdoor station (some models freeze with use of hikconnect, so you can now automate a restart at night)
-- Added more logging
-
-## 2.0
-
-- Multi-architecture build! 
-- Improve logging
-
-## 1.6
-
-- Downgraded python version to 3.10.8, newer python version gave "segmentation fault", addon instantly stops
-
-## 1.5
-
-- Added Callsignal command with stdin service, to abort/reject calls

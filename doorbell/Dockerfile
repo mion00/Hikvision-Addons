@@ -32,6 +32,6 @@ ENV PYTHONFAULTHANDLER=true
 # Required env variable to load Hikvision ssl and crypto libraries instead of system libraries
 ENV LD_LIBRARY_PATH=/app/lib-${BUILD_ARCH}
 
-ENTRYPOINT [ "python3"]
+ENTRYPOINT ["python3"]
 
-CMD ["/app/main.py" ]
+CMD ["/app/main.py"]
