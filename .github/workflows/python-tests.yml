@@ -139,7 +139,7 @@ jobs:
           name: image aarch64
           path: "artifacts/"
       
-      - uses: uraimo/run-on-arch-action@v3
+      - uses: uraimo/run-on-arch-action@v2
         name: Run aarch64 commands
         id: runcmd
         with:
