@@ -34,11 +34,11 @@ To quickly get started, click the following button:
 This program can run as a standalone Docker container, for all other type of installations. (Openhab, Home Assistant Container, ...)
 
 
-## [Use Asterisk as Indoor extension](asterisk/asterisk.as.indoor.md)
+## [Use Asterisk as Indoor extension](docs/asterisk.as.indoor.md)
 
 __NOTE__: This is not an add-on, just an alternate way to setup Asterisk without setting up SIP on the devices!
 
-## [Use Frigate with Two Audio Support and a Lovelace Hass Card](frigate/twowayaudio.with.frigate.md)
+## [Use Frigate with Two Audio Support and a Lovelace Hass Card](docs/frigate_two_way_audio.md)
 
 __NOTE__: This is not an add-on, just an alternate way to answers calls using Home Assistant with Two Way Audio ISAPI support!
 

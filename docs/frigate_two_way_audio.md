@@ -78,7 +78,7 @@ So the phone buttons activates 4 services, first it "answer" + "hangUp"  the cal
 
 If you send the "answer" command and you notice error 29 in the log on a real call, this means that your device is NOT connected to Hikconnect, seems for the answer command to work, it needs internet connection... It thats not possible, you can use the "reject" command instead!
 
-![Ivms](frigate.png)
+![Ivms](../assets/frigate.png)
 
 ```
         - type: custom:frigate-card

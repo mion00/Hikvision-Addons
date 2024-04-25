@@ -40,7 +40,7 @@ In below example, 192.168.0.71 is my primary indoor panel, 10000000005 is actual
 Some indoor panels dont have the option to add extensions, then try without it, just use the trunk setup below... if you receive an 404 or 401 error when debugging sip, proceed to option 2, and skip this trunk setup... I always use the tool "sngrep", you can install it in the SSH addon with the command "apk add sngrep"
 
 
-![Ivms](ivms.png)
+![Ivms](../assets/ivms.png)
 
 Below is the trunk you need to define in Asterisk, make sure the password matches, now restart Asterisk, and see if if the Asterisk can succesfull register
 
@@ -88,7 +88,7 @@ On some indoor panels you are not able to add the SN with ivms, when registering
 The script needs to be running the whole time, so start it with an automation upon boot HA, and use this shell_command below.. its doing an reregister every 900 sec.
 
 
-[hikvision_register.py](hikvision_register.py)
+[hikvision_register.py](../asterisk/hikvision_register.py)
 
 Try it fist from a putty console, to see it it works, afterwards you can use below shellcommand with an automation.
 
